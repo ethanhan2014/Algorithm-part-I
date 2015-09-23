@@ -10,7 +10,9 @@ public class Subset {
 		for(int i=0;i<k;i++){            
 			input [i] =StdIn.readString(); 
 		}
+		
 		StdRandom.shuffle(input);
+		
 		for(String s:input){
 			StdOut.println(s);
 		}
