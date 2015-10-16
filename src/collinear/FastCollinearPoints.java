@@ -2,16 +2,14 @@ package collinear;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class FastCollinearPoints {
 	private int num = 0;
 	private final List<LineSegment> lines;
 
 	public FastCollinearPoints(Point[] points) {
-		checkDuplicate(points);
+		
 		lines = new ArrayList<LineSegment>();
 		int N = points.length;
 		//sort points by coordinates
@@ -66,12 +64,5 @@ public class FastCollinearPoints {
 		return segments;
 	}
 	
-	private void checkDuplicate(Point[] points){
-		Set<Point> setPoint = new HashSet<Point>();
-		  for (Point i : points)
-		  {
-		    if (setPoint.contains(i)) throw new IllegalArgumentException();
-		    setPoint.add(i);
-		  }
-	}
+
 }

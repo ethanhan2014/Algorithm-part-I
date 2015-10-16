@@ -2,9 +2,7 @@ package collinear;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class BruteCollinearPoints {
 	private int lineNum = 0 ;
@@ -14,7 +12,7 @@ public class BruteCollinearPoints {
 	 * @param points
 	 */
 	public BruteCollinearPoints(Point[] points) {
-		checkDuplicate(points);
+		
 		lines = new ArrayList<LineSegment>();
 		int N = points.length;
 		Arrays.sort(points);
@@ -53,13 +51,6 @@ public class BruteCollinearPoints {
 		return segments;
 	}
 	
-	private void checkDuplicate(Point[] points){
-		Set<Point> setPoint = new HashSet<Point>();
-		  for (Point i : points)
-		  {
-		    if (setPoint.contains(i)) throw new IllegalArgumentException();
-		    setPoint.add(i);
-		  }
-	}
+	
 
 }
